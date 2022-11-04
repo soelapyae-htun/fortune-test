@@ -20,6 +20,10 @@ jobs:
       run: echo "head_ref - ${{ github.head_ref }}, owner - ${{github.repository_owner}}"
     - name: List runner name
       run: echo "runner os - ${{ runner.os }}"
+    - name: MY_NODE
+      uses: actions/setup-node
+      with:
+        node-version: 16
     - name: Install Railway
       run: npm i -g @railway/cli
     - name: Deploy
