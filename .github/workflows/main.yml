@@ -90,7 +90,14 @@ jobs:
               }
             ]
           }
-  
+    - name: Create GitHub Release
+      uses: actions/create-release@v1
+      with:
+        tag_name: ${{ github.run_number }}
+        release_name: ${{ github.run_number }}
+
+
+
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.MY_SOMETHING }}
         SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
