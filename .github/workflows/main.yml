@@ -14,6 +14,8 @@ jobs:
 
     #List of steps to perform task
     steps:
+    - name: using checkout
+      uses: actions/checkout@v3
     - name: echo the date
       run: echo "The current time and date in GitHub is $(date)"
     - name: echo information about the contex
