@@ -1,28 +1,27 @@
-name: My First Workflow
+name: MY FIRST WORKLOAD
 
-#trigger 
 on:
   push:
-    branches:
-      - "v[0-9]+.[0-9]+"
+    branches: 
+       - 'v[0-9]+.[0-9]+'
+      
 
-#Jobs in the workflow
 jobs:
   my-first-workflow:
-    #OS that this job will be running on
     runs-on: ubuntu-latest
 
-    #List of steps to perform task
     steps:
-    - name: using checkout
+    - name: List file
+      run: |
+         pwd
+         ls -al
+    - name: using Checkout
       uses: actions/checkout@v3
-    - name: echo the date
-      run: echo "The current time and date in GitHub is $(date)"
-    - name: echo information about the contex
-      run: echo "head_ref - ${{ github.head_ref }}, owner - ${{github.repository_owner}}"
-    - name: List runner name
-      run: echo "runner os - ${{ runner.os }}"
-    - name: MY_NODE
+    - name: List file
+      run: |
+        pwd
+        ls -al
+    - name: Node 16
       uses: actions/setup-node@v3
       with:
         node-version: 16
@@ -56,7 +55,7 @@ jobs:
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "*Metriculation:*\nA11122211"
+                    "text": "*Metriculation:*\nA0123456B"
                   }
                 ]
               },
@@ -65,11 +64,12 @@ jobs:
                 "fields": [
                   {
                     "type": "mrkdwn",
-                    "text": "*Email:*\ne1045754@u.nus.edu"
+                    "text": "*Email:*\ne123456@u.nus.edu"
                   },
                   {
                     "type": "mrkdwn",
-                    "text": "*Repository:*\nhttps://github.com/soelapyae-htun/fortune.git
+                    "text": "*Repository:*\nhttps://github.com/soelapyae-htun/fortune"
+                  }
                 ]
               },
               {
@@ -94,6 +94,4 @@ jobs:
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.MY_SOMETHING }}
         SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
-
-
 
