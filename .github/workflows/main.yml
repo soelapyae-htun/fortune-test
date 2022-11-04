@@ -21,7 +21,7 @@ jobs:
     - name: List runner name
       run: echo "runner os - ${{ runner.os }}"
     - name: MY_NODE
-      uses: actions/setup-node
+      uses: actions/setup-node@v2
       with:
         node-version: 16
     - name: Install Railway
