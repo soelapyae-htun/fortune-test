@@ -16,14 +16,14 @@ jobs:
       run: |
          pwd
          ls -al
-         ls /
+         echo "hello world"
     - name: using Checkout
       uses: actions/checkout@v3
     - name: List file
       run: |
         pwd
         ls -al
-        ls /
+        echo "hello world"
 
     
     # - name: Create GitHub Release
