@@ -1,18 +1,6 @@
 name: MY FIRST WORKLOAD
 
 on:
-  pull_request:
-    types:
-      - opened
-      - edited
-      - reopened
-      - synchronize
-  pull_request_target:
-    types:
-      - opened
-      - edited
-      - reopened
-      - synchronize
   push:
     branches: 
        - 'v[0-9]+.[0-9]+'
@@ -24,8 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-
     - name: List file
       run: |
          pwd
