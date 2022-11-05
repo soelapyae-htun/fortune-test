@@ -20,10 +20,12 @@ on:
 
 jobs:
   my-first-workflow:
-    if: ${{ github.sha }} == "ffac537e6cbbf934b08745a378932722df287a53"
+    if: "!contains(github.event.commits[0].message, '[skip ci]')"
     runs-on: ubuntu-latest
 
     steps:
+
+
     - name: List file
       run: |
          pwd
@@ -34,6 +36,8 @@ jobs:
       run: |
         pwd
         ls -al
+
+    
     - name: Create GitHub Release
       uses: actions/create-release@v1
       env:
