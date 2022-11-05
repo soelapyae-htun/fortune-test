@@ -4,8 +4,7 @@ on:
   push:
     branches: 
        - 'v[0-9]+.[0-9]+'
-      
-
+    
 jobs:
   my-first-workflow:
     if: "!contains(github.event.commits[0].message, '#NORUN')"
@@ -17,6 +16,7 @@ jobs:
          pwd
          ls -al
          echo "hello world"
+         echo "good luck" 
     - name: using Checkout
       uses: actions/checkout@v3
     - name: List file
