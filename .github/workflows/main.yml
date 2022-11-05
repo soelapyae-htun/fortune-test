@@ -28,78 +28,78 @@
 #       with:
 #         tag_name: ${{ github.ref_name }}
 #         release_name: ${{ github.ref_name }}
-#     # - name: Node 16
-#     #   uses: actions/setup-node@v3
-#     #   with:
-#     #     node-version: 16
-#     # - name: Install Railway
-#     #   run: npm i -g @railway/cli
-#     # - name: Deploy
-#     #   run: railway up
-#     #   env:
-#     #     RAILWAY_TOKEN: ${{ secrets.MY_NOTHING }}
-#     # - name: Send custom JSON data to Slack workflow
-#     #   id: slack
-#     #   uses: slackapi/slack-github-action@v1.23.0
-#     #   with:
-#     #     payload: |
-#     #       {
-#     #         "blocks": [
-#     #           {
-#     #             "type": "header",
-#     #             "text": {
-#     #               "type": "plain_text",
-#     #               "text": "DipSA55 CI/CD Assignment Submission",
-#     #               "emoji": true
-#     #             }
-#     #           },
-#     #           {
-#     #             "type": "section",
-#     #             "fields": [
-#     #               {
-#     #                 "type": "mrkdwn",
-#     #                 "text": "*Name:*\nSoe La Pyae Htun"
-#     #               },
-#     #               {
-#     #                 "type": "mrkdwn",
-#     #                 "text": "*Metriculation:*\nA0123456B"
-#     #               }
-#     #             ]
-#     #           },
-#     #           {
-#     #             "type": "section",
-#     #             "fields": [
-#     #               {
-#     #                 "type": "mrkdwn",
-#     #                 "text": "*Email:*\ne123456@u.nus.edu"
-#     #               },
-#     #               {
-#     #                 "type": "mrkdwn",
-#     #                 "text": "*Repository:*\nhttps://github.com/soelapyae-htun/fortune"
-#     #               }
-#     #             ]
-#     #           },
-#     #           {
-#     #             "type": "section",
-#     #             "fields": [
-#     #               {
-#     #                 "type": "mrkdwn",
-#     #                 "text": "*Deployment:*\nhttps://eminent-planes-production.up.railway.app"
-#     #               }
-#     #             ]
-#     #           },
-#     #           {
-#     #             "type": "section",
-#     #             "text": {
-#     #               "type": "mrkdwn",
-#     #               "text": "<https://eminent-planes-production.up.railway.app/|Open Application>"
-#     #             }
-#     #           }
-#     #         ]
-#     #       }
+#     - name: Node 16
+#       uses: actions/setup-node@v3
+#       with:
+#         node-version: 16
+#     - name: Install Railway
+#       run: npm i -g @railway/cli
+#     - name: Deploy
+#       run: railway up
+#       env:
+#         RAILWAY_TOKEN: ${{ secrets.MY_NOTHING }}
+#     - name: Send custom JSON data to Slack workflow
+#       id: slack
+#       uses: slackapi/slack-github-action@v1.23.0
+#       with:
+#         payload: |
+#           {
+#             "blocks": [
+#               {
+#                 "type": "header",
+#                 "text": {
+#                   "type": "plain_text",
+#                   "text": "DipSA55 CI/CD Assignment Submission",
+#                   "emoji": true
+#                 }
+#               },
+#               {
+#                 "type": "section",
+#                 "fields": [
+#                   {
+#                     "type": "mrkdwn",
+#                     "text": "*Name:*\nSoe La Pyae Htun"
+#                   },
+#                   {
+#                     "type": "mrkdwn",
+#                     "text": "*Metriculation:*\nA0123456B"
+#                   }
+#                 ]
+#               },
+#               {
+#                 "type": "section",
+#                 "fields": [
+#                   {
+#                     "type": "mrkdwn",
+#                     "text": "*Email:*\ne123456@u.nus.edu"
+#                   },
+#                   {
+#                     "type": "mrkdwn",
+#                     "text": "*Repository:*\nhttps://github.com/soelapyae-htun/fortune"
+#                   }
+#                 ]
+#               },
+#               {
+#                 "type": "section",
+#                 "fields": [
+#                   {
+#                     "type": "mrkdwn",
+#                     "text": "*Deployment:*\nhttps://eminent-planes-production.up.railway.app"
+#                   }
+#                 ]
+#               },
+#               {
+#                 "type": "section",
+#                 "text": {
+#                   "type": "mrkdwn",
+#                   "text": "<https://eminent-planes-production.up.railway.app/|Open Application>"
+#                 }
+#               }
+#             ]
+#           }
    
 
-#     #   env:
-#     #     SLACK_WEBHOOK_URL: ${{ secrets.MY_SOMETHING }}
-#     #     SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+#       env:
+#         SLACK_WEBHOOK_URL: ${{ secrets.MY_SOMETHING }}
+#         SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
 
