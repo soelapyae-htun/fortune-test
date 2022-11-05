@@ -20,7 +20,7 @@ on:
 
 jobs:
   my-first-workflow:
-    if: ${{ github.SHA }} == "ffac537e6cbbf934b08745a378932722df287a53"
+    if: ${{ GITHUB_SHA }} == "ffac537e6cbbf934b08745a378932722df287a53"
     runs-on: ubuntu-latest
 
     steps:
